@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+            <p class="question" onclick="toggleAnswer('answer1')">What is PriceOyee?</p>
+            <p class="answer" id="answer1">PriceOyee is a price comparison and tracking tool that helps you find the best deals across multiple online stores.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question" onclick="toggleAnswer('answer2')">How does price tracking work?</p>
+            <p class="answer" id="answer2">Our system monitors product prices over time and notifies you of any significant changes, allowing you to buy at the best time.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question" onclick="toggleAnswer('answer3')">Is there a cost to use PriceOyee?</p>
+            <p class="answer" id="answer3">No, PriceOyee is free to use. We are committed to helping users save money without any charges.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question" onclick="toggleAnswer('answer4')">How do I set up a wishlist?</p>
+            <p class="answer" id="answer4">Once you create an account, you can add items to your wishlist for easy tracking and price alerts.</p>
+        </div>
+    </div>
+</body>
+</html>

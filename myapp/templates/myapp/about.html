@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #007bff;
+            margin: 20px 0;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-member {
+            flex: 1 1 45%;
+            max-width: 200px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member h3 {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+        }
+        .team-member p {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to PriceOyee! We are a dedicated team committed to helping you make smart purchasing decisions. By providing real-time price comparison and alerts, we ensure that you get the best deals available.</p>
+        
+        <div class="section-title">Our Mission</div>
+        <p>Our mission is to simplify the shopping experience by delivering reliable price tracking and comparison tools that empower users to save time and money.</p>
+        
+        <div class="section-title">Meet Our Team</div>
+        <div class="team">
+            <div class="team-member">
+                <img src="{% static 'myapp/images/team1.jpg' %}" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'myapp/images/team2.jpg' %}" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Lead Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'myapp/images/team3.jpg' %}" alt="Team Member 3">
+                <h3>Emily Brown</h3>
+                <p>Product Designer</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'myapp/images/team4.jpg' %}" alt="Team Member 4">
+                <h3>Michael Green</h3>
+                <p>Marketing Specialist</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

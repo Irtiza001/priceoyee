@@ -1845,16 +1845,16 @@
                                 <div class="fleft">
                                     <!-- <img src="{% static 'myapp/footer/logo.svg' %}" alt=""> -->
                                     <div class="firstline"><img src="{% static 'myapp/footer/logo.svg' %}" alt=""></div>
-                                    <li>About Us</li>
-                                    <li>FAQs</li>
-                                    <li>Contact Us</li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'faq' %}">FAQs</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     <li>Careers</li>
                                     <li>Press & Blog</li>
                                     <li>Terms & Condition</li>
                                 </div>
 
                                 <div class="fmid">
-                                    <div class="firstline" style="width: 100%;">Customer Service</div>
+                                    <div class="firstline" style="width: 100%;"><a href="{% url 'customer_service' %}">Customer Services</a></div>
                                     <li>Help Center</li>
                                     <li>Privacy Policy</li>
                                     <li>Installments Plan</li>

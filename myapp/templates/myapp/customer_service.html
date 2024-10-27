@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Service</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #007bff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .contact-info, .faq, .support-links {
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .faq-item {
+            margin-top: 10px;
+        }
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            color: #007bff;
+        }
+        .answer {
+            display: none;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Service</h1>
+        
+        <div class="contact-info">
+            <div class="section-title">Contact Information</div>
+            <p>If you need help, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: support@priceoyee.com</li>
+                <li>Phone: +1 (800) 555-1234</li>
+                <li>Hours: Mon-Fri, 9:00 AM - 5:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="faq">
+            <div class="section-title">Frequently Asked Questions</div>
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq1')">How do I track a price?</p>
+                <p class="answer" id="faq1">To track a price, create an account, search for your item, and add it to your wishlist. We'll notify you of any price changes.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq2')">Can I receive alerts for price drops?</p>
+                <p class="answer" id="faq2">Yes, you can set up alerts for specific products and we'll notify you via email when the price drops.</p>
+            </div>
+        </div>
+
+        <div class="support-links">
+            <div class="section-title">Additional Support Resources</div>
+            <p>For more help, check out our:</p>
+            <ul>
+                <li><a href="{% url 'faq' %}">FAQ Page</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}"> <!-- Link to your CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto; /* Center the container */
+            padding: 30px; /* More padding for better spacing */
+            background: white; /* White background for the content */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px; /* Increased space below the header */
+            text-align: center; /* Center the header */
+        }
+        form {
+            display: flex;
+            flex-direction: column; /* Stack inputs vertically */
+        }
+        input, textarea {
+            margin-bottom: 20px; /* Space between inputs */
+            padding: 12px; /* Slightly larger padding for comfort */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* Larger font size for readability */
+        }
+        button {
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Larger font size for better visibility */
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px; /* Increased space above the link */
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center; /* Center the back link */
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <a class="back-link" href="{% url 'priceoye' %}">Back to List</a> <!-- Link to go back -->
+    </div>
+</body>
+</html>

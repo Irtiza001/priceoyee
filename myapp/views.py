@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.views import View
+from django.http import HttpResponse
+from .forms import ContactForm
 
 def register_view(request):
     if request.method == 'POST':
@@ -28,8 +30,38 @@ def priceoye_view(request):
     return render(request, 'myapp/priceoye.html')
 
 
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Process the data (e.g., send an email, save to database, etc.)
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            
+            # For demonstration, we will just return a success response
+            # You can implement email sending logic here
+            return HttpResponse(f"Thank you {name}, your message has been sent!")
+    else:
+        form = ContactForm()
+
+    return render(request, 'myapp/contact.html', {'form': form})
+
+
+def about_view(request):
+    return render(request, 'myapp/about.html')  # Adjust 'myapp' to match your app's name
+
+def faq(request):
+    return render(request, 'myapp/faq.html')  # Adjust 'myapp' to match your app's name
+
+def customer_service(request):
+    return render(request, 'myapp/customer_service.html')  # Adjust 'myapp' to match your app's name
+
 #extra code
 
 class MobileImageView(View):
     def get(self, request):
         return render(request, 'myapp/mobile_image.html')
+    
+
+    
