@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Image</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}"> <!-- Link to your CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            padding: 20px; /* Added padding to the body */
+        }
+        .container {
+            max-width: 600px; /* Limit the width of the container */
+            padding: 20px;
+            background: white; /* White background for the content */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text within the container */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: flex-start; /* Align children to the top */
+            margin: auto; /* Center the container */
+        }
+        h1 {
+            color: #333; /* Dark text for header */
+            margin-bottom: 20px; /* Space below the header */
+        }
+        img {
+            display: block;
+            margin: 0 auto 20px; /* Center the image and add space below */
+            max-width: 100%; /* Responsive image */
+            height: auto;
+            border-radius: 5px; /* Rounded corners for the image */
+        }
+        p {
+            line-height: 1.6; /* Improve readability */
+            color: #555; /* Slightly lighter text color */
+            margin-bottom: 20px; /* Space below the paragraph */
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Image</h1>
+        <img src="{% static 'myapp/assests/mobiles_nav.svg' %}" alt="Mobile">
+        <p>
+            In today's fast-paced digital world, smartphones have become an essential part of our daily lives. This mobile device stands out in a competitive market with its combination of cutting-edge technology, sleek design, and user-friendly features. Designed for those who demand both style and performance, this smartphone offers a seamless experience for a variety of tasks, from everyday communication to advanced gaming.
+        </p>
+        <p>
+            The device features a stunning high-definition display that captivates users with its vibrant colors and sharp details. Measuring at an optimal size, the screen provides an immersive viewing experience for streaming videos, browsing the web, or playing games. The thin bezels enhance the visual experience, making it feel like you’re engaging with the content rather than the device itself. Coupled with a sleek and ergonomic design, this smartphone fits comfortably in your hand, allowing for easy navigation and use.
+        </p>
+       
+        <a class="back-link" href="{% url 'priceoye' %}">Back to List</a> <!-- Link to go back -->
+    </div>
+</body>
+</html>
