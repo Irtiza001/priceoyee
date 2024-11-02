@@ -57,8 +57,6 @@ def faq(request):
 def customer_service(request):
     return render(request, 'myapp/customer_service.html')  # Adjust 'myapp' to match your app's name
 
-<<<<<<< HEAD
-=======
 def career(request):
     return render(request, 'myapp/career.html')  # Render the careers.html template
 
@@ -91,7 +89,6 @@ def methods(request):
 
 
 
->>>>>>> 858ae1e (2nd week done)
 #extra code
 
 class MobileImageView(View):

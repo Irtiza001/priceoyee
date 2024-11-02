@@ -15,9 +15,7 @@ urlpatterns = [
     path('about/', views.about_view, name='about'),
     path('faq/', views.faq, name='faq'),
     path('customer-service/', views.customer_service, name='customer_service'),
-<<<<<<< HEAD
     
-=======
     path('career/', views.career, name='career'),  # Define URL for careers page
     path('blog/', views.blog, name='blog'), 
     path('term/', views.term, name='term'),
@@ -28,6 +26,5 @@ urlpatterns = [
     path('methods/', views.methods, name='methods'),
 
 
->>>>>>> 858ae1e (2nd week done)
 
 ]
