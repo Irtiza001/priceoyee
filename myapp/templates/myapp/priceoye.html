@@ -1849,12 +1849,12 @@
                                     <li><a href="{% url 'faq' %}">FAQs</a></li>
                                     <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     <li><a href="{% url 'career' %}">Careers</a></li>
-                                    <li><a href="{% url 'blog' %}">Press & Blog</a></li>
+                                    <li><a href="{% url 'blog_list' %}">Press & Blog</a></li>
                                     <li><a href="{% url 'term' %}">Terms & Condition</a></li>
                                 </div>
 
                                 <div class="fmid">
-                                    <div class="firstline" style="width: 100%;"><a href="{% url 'customer_service' %}">Customer Services</a></div>
+                                    <div class="firstline" style="width: 100%;"><a href="{% url 'service_list' %}">Customer Services</a></div>
                                     <li><a href="{% url 'help' %}">Help Center</a></li>
                                     <li><a href="{% url 'Privacy' %}">Privacy Policy</a></li>
                                     <li><a href="{% url 'plans' %}">Installments Plan</a></li>
@@ -1891,7 +1891,7 @@
 
     <script>
         document.getElementById('register-btn').addEventListener('click', function() {
-            window.location.href = '{% url "register" %}';  // Adjust with your actual register URL name
+            window.location.href = '{% url "signup" %}';  // Adjust with your actual register URL name
         });
     
         document.getElementById('login-btn').addEventListener('click', function() {
