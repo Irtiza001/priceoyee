@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading and Subheading */
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Section and Paragraph Styles */
+        .faq-section {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Links Styling */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Help Center</h1>
+        <p>Welcome to our Help Center! Find answers to frequently asked questions or contact us for additional support.</p>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: How do I create an account?</strong><br>
+            A: To create an account, click on the "Sign Up" button at the top-right corner and fill in your details.</p>
+
+            <p><strong>Q: I forgot my password, what should I do?</strong><br>
+            A: Click on "Forgot Password?" on the login page and follow the instructions to reset your password.</p>
+
+            <p><strong>Q: How do I contact customer support?</strong><br>
+            A: You can reach out to our customer support team through the <a href="#">Contact Us</a> page.</p>
+        </div>
+
+        <div class="faq-section">
+            <h2>Technical Support</h2>
+            <p>If you are experiencing technical issues, please make sure your browser is up to date or try using a different browser. If the problem persists, <a href="#">contact our technical support team</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

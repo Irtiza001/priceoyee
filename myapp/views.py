@@ -57,6 +57,41 @@ def faq(request):
 def customer_service(request):
     return render(request, 'myapp/customer_service.html')  # Adjust 'myapp' to match your app's name
 
+<<<<<<< HEAD
+=======
+def career(request):
+    return render(request, 'myapp/career.html')  # Render the careers.html template
+
+def blog(request):
+    return render(request, 'myapp/blog.html')  # Renders Press & Blog page
+
+def term(request):
+    return render(request, 'myapp/term.html')  # Renders Terms & Conditions page
+
+def help(request):
+    return render(request, 'myapp/help.html')  # Renders Help Center page
+
+def privacy(request):
+    return render(request, 'myapp/privacy.html')
+
+def plan(request):
+    return render(request, 'myapp/plan.html')
+
+def activation(request):
+    return render(request, 'myapp/activation.html')
+
+def methods(request):
+    return render(request, 'myapp/methods.html')
+
+
+
+
+
+
+
+
+
+>>>>>>> 858ae1e (2nd week done)
 #extra code
 
 class MobileImageView(View):

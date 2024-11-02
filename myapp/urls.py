@@ -15,6 +15,19 @@ urlpatterns = [
     path('about/', views.about_view, name='about'),
     path('faq/', views.faq, name='faq'),
     path('customer-service/', views.customer_service, name='customer_service'),
+<<<<<<< HEAD
     
+=======
+    path('career/', views.career, name='career'),  # Define URL for careers page
+    path('blog/', views.blog, name='blog'), 
+    path('term/', views.term, name='term'),
+    path('help/', views.help, name='help'),  # Help Center page URL
+    path('Privacy/', views.privacy, name='Privacy'),        # Privacy Policy page
+    path('plans/', views.plan, name='plans'), # Installments Plan page
+    path('activation/', views.activation, name='activation'), # E-Warranty Activation page
+    path('methods/', views.methods, name='methods'),
+
+
+>>>>>>> 858ae1e (2nd week done)
 
 ]

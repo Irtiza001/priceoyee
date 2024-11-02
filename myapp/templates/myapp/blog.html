@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press & Blog</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Press & Blog</h1>
+        <p>Stay updated with our latest news and stories!</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Press Releases Section -->
+        <div class="section">
+            <h2>Press Releases</h2>
+            <div class="post">
+                <h3>Product Launch 2024</h3>
+                <p>We’re excited to announce the launch of our new product line. Get all the details in our latest press release.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="post">
+                <h3>Funding Announcement</h3>
+                <p>Our company has secured Series B funding to accelerate growth. Learn more about our plans for the future.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Blog Articles Section -->
+        <div class="section">
+            <h2>Blog Articles</h2>
+            <div class="post">
+                <h3>Innovation in Tech</h3>
+                <p>Explore the latest trends in technology and how we are adapting to bring the best solutions to our users.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="post">
+                <h3>Our Sustainability Journey</h3>
+                <p>See how we’re implementing sustainable practices to reduce our carbon footprint.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <p>Want to stay in the loop? Subscribe to our newsletter for the latest updates!</p>
+            <a href="#" class="subscribe-button">Subscribe</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
